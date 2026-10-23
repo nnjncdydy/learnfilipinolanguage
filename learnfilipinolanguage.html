@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Free trial lesson, then paid Tagalog and Bisaya (Cebuano) lessons with Aninaw on Zoom or Google Meet.">
+<meta property="og:title" content="Learn Cebuano and Tagalog">
+<meta property="og:description" content="Talk to her in her own language. Free first trial lesson with Aninaw.">
+<style>body{margin:0}</style>
+<title>Learn Cebuano and Tagalog</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600&display=swap">
+<style>
+/* Layout: one narrow reading column, big phrase table as the centerpiece, built to be opened from a phone chat link */
+:root {
+  --bg: #f2f7f5;
+  --surface: #ffffff;
+  --ink: #0e2a33;
+  --muted: #4d6670;
+  --line: #d3e1dd;
+  --accent: #0b6e72;
+  --accent-ink: #ffffff;
+  --sun: #f2b632;
+  --sun-ink: #3a2a00;
+  --font-display: "Bricolage Grotesque", "Trebuchet MS", sans-serif;
+  --font-body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0a1d22; --surface: #10292f; --ink: #e8f3f0; --muted: #9db8b4;
+    --line: #21424a; --accent: #4fc3c0; --accent-ink: #062226;
+    --sun: #f2b632; --sun-ink: #3a2a00; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0a1d22; --surface: #10292f; --ink: #e8f3f0; --muted: #9db8b4;
+  --line: #21424a; --accent: #4fc3c0; --accent-ink: #062226;
+  --sun: #f2b632; --sun-ink: #3a2a00; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: var(--font-body); font-size: 17px; line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 28px 56px;
+}
+.wrap { max-width: 640px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px; }
+h1, h2 { font-family: var(--font-display); text-wrap: balance; margin: 0; line-height: 1.1; letter-spacing: -0.01em; }
+h1 { font-size: clamp(2.3rem, 9vw, 3.4rem); font-weight: 700; }
+h2 { font-size: 1.55rem; font-weight: 700; }
+p { margin: 0; }
+.eyebrow { font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; color: var(--accent); }
+.hero { display: flex; flex-direction: column; gap: 16px; }
+.hero .lead { font-size: 1.15rem; color: var(--muted); max-width: 52ch; }
+.hello { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+.hello span { background: var(--sun); color: var(--sun-ink); font-family: var(--font-display); font-weight: 700; padding: 6px 14px; border-radius: 999px; font-size: 1rem; }
+.sec { display: flex; flex-direction: column; gap: 14px; }
+.sec > p { color: var(--muted); max-width: 56ch; }
+.tablebox { overflow-x: auto; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; min-width: 440px; }
+th, td { text-align: left; padding: 12px 16px; border-bottom: 1px solid var(--line); }
+tr:last-child td { border-bottom: 0; }
+th { font-size: 0.74rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+td:first-child { color: var(--muted); font-size: 0.95rem; }
+td:nth-child(2), td:nth-child(3) { font-family: var(--font-display); font-weight: 500; font-size: 1.12rem; }
+td.same { color: var(--accent); }
+.points { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+.points > div { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
+.points strong { font-family: var(--font-display); font-size: 1.1rem; }
+.points p { color: var(--muted); font-size: 0.97rem; }
+.cta { background: var(--accent); color: var(--accent-ink); border-radius: 18px; padding: 24px 22px; display: flex; flex-direction: column; gap: 10px; }
+.cta h2 { color: var(--accent-ink); }
+.cta p { font-size: 1.02rem; }
+.small { font-size: 0.88rem; color: var(--muted); }
+.prices { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; }
+.prices > div { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.prices .len { font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; color: var(--muted); }
+.prices .amt { font-family: var(--font-display); font-weight: 700; font-size: 2.2rem; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.prices .free { background: var(--sun); color: var(--sun-ink); border-color: var(--sun); justify-content: center; }
+.prices .free .amt { color: var(--sun-ink); }
+.prices .free .len { color: var(--sun-ink); }
+.form { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 18px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.field { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.field.wide { grid-column: 1 / -1; }
+.field label { font-weight: 600; font-size: 0.95rem; }
+.field input, .field select, .field textarea { font: inherit; font-size: 16px; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; width: 100%; min-width: 0; }
+.field textarea { resize: vertical; }
+.field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible, .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn { font: inherit; font-weight: 600; background: var(--accent); color: var(--accent-ink); border: 1px solid var(--accent); border-radius: 10px; padding: 12px 18px; cursor: pointer; }
+.btn.alt { background: transparent; color: var(--accent); }
+@media (prefers-reduced-motion: no-preference) {
+  .hello span { transition: transform 0.2s; }
+  .hello span:hover { transform: translateY(-2px); }
+}
+</style>
+
+</head>
+<body>
+<main class="wrap">
+  <header class="hero">
+    <p class="eyebrow">Language lessons with Aninaw</p>
+    <h1>Talk to her in her own language.</h1>
+    <p class="lead">Hi, I'm Aninaw, from the Philippines. I teach Tagalog and Bisaya (Cebuano) to anyone who wants to talk with their Filipina girlfriend, her family, or Filipino coworkers and clients. Your first trial lesson is free. After that, lessons are paid.</p>
+    <div class="hello" aria-label="Greetings in both languages">
+      <span>Kumusta!</span>
+      <span>Maayong buntag!</span>
+      <span>Magandang umaga!</span>
+    </div>
+  </header>
+
+  <section class="sec">
+    <h2>Two languages, one country</h2>
+    <p>Tagalog is the base of Filipino and is spoken around Manila. Cebuano is spoken across the Visayas and much of Mindanao. Many words differ, so pick the one that fits the people you want to talk to.</p>
+    <div class="tablebox" role="region" aria-label="Phrase comparison" tabindex="0">
+      <table>
+        <thead><tr><th>English</th><th>Tagalog</th><th>Cebuano</th></tr></thead>
+        <tbody>
+          <tr><td>How are you?</td><td class="same">Kumusta ka?</td><td class="same">Kumusta ka?</td></tr>
+          <tr><td>Good morning</td><td>Magandang umaga</td><td>Maayong buntag</td></tr>
+          <tr><td>Thank you</td><td class="same">Salamat</td><td class="same">Salamat</td></tr>
+          <tr><td>Delicious</td><td>Masarap</td><td>Lami</td></tr>
+          <tr><td>Let's eat</td><td>Kain tayo</td><td>Kaon ta</td></tr>
+          <tr><td>No</td><td>Hindi</td><td>Dili</td></tr>
+          <tr><td>I love you</td><td>Mahal kita</td><td>Gihigugma tika</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small">Teal rows are the same in both languages.</p>
+  </section>
+
+  <section class="sec">
+    <h2>How lessons work</h2>
+    <div class="points">
+      <div><strong>Free first trial</strong><p>Try one lesson before you pay anything. If it is not for you, there is nothing to cancel.</p></div>
+      <div><strong>Zoom or Google Meet</strong><p>Lessons are live on video. Tell me which app you are comfortable with and I will use it.</p></div>
+      <div><strong>You choose the language and goal</strong><p>Tagalog, Cebuano, or both. Greetings, daily conversation, travel phrases, or talking with family and friends.</p></div>
+      <div><strong>Pay with Wise or GoTyme</strong><p>If you want to keep learning after the trial, you pay me through Wise or GoTyme. We agree the rate and schedule first, so there are no surprises.</p></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2>Prices</h2>
+    <div class="prices">
+      <div class="free"><span class="len">First trial</span><span class="amt">Free</span></div>
+      <div><span class="len">30 minutes</span><span class="amt">$5</span></div>
+      <div><span class="len">1 hour</span><span class="amt">$10</span></div>
+    </div>
+    <p class="small">Prices are in US dollars. You can pay through Wise or GoTyme.</p>
+  </section>
+
+  <section class="sec">
+    <h2>Tell me what you need</h2>
+    <p>Answer these questions so I can plan your free trial lesson. When you tap Send, your answers come straight to me.</p>
+    <form class="form" id="needs-form">
+      <div class="field"><label for="f-name">Your name</label><input id="f-name" type="text" autocomplete="given-name" required></div>
+      <div class="field"><label for="f-lang">Language</label>
+        <select id="f-lang" required><option value="">Choose one</option><option>Tagalog</option><option>Bisaya (Cebuano)</option><option>Both</option></select></div>
+      <div class="field"><label for="f-why">Why do you want to learn?</label>
+        <select id="f-why" required><option value="">Choose one</option><option>To talk with my girlfriend</option><option>To talk with her family</option><option>For work</option><option>For travel</option><option>Other</option></select></div>
+      <div class="field"><label for="f-level">Your level now</label>
+        <select id="f-level" required><option value="">Choose one</option><option>Complete beginner</option><option>I know a few words</option><option>I can hold a simple conversation</option></select></div>
+      <div class="field wide"><label for="f-say">What do you most want to be able to say or understand?</label>
+        <textarea id="f-say" rows="3" placeholder="For example: sweet messages, meeting her parents, talking with coworkers" required></textarea></div>
+      <div class="field"><label for="f-app">Which app are you comfortable with?</label>
+        <select id="f-app" required><option value="">Choose one</option><option>Zoom</option><option>Google Meet</option><option>Either one</option></select></div>
+      <div class="field"><label for="f-len">Lesson length</label>
+        <select id="f-len" required><option value="">Choose one</option><option>30 minutes</option><option>1 hour</option></select></div>
+      <div class="field wide"><label for="f-time">Your time zone and best days and times</label>
+        <input id="f-time" type="text" placeholder="For example: New York time, weekday evenings" required></div>
+      <div class="field wide"><label for="f-contact">How can I reach you?</label><input id="f-contact" type="text" placeholder="Your username on the app where we chatted, or your email" required></div>
+      <div class="field wide actions"><button class="btn" type="submit" id="send-btn">Send to Aninaw</button></div>
+      <div class="field wide" id="result-box" hidden>
+        <label for="f-result">Your answers</label>
+        <textarea id="f-result" rows="9" readonly></textarea>
+        <div class="actions"><button class="btn alt" type="button" id="copy-btn">Copy my answers</button></div>
+        <p class="small" id="copy-note">Paste these into our chat so I can set up your free trial.</p>
+      </div>
+    </form>
+  </section>
+
+  <section class="cta">
+    <h2>Want to start?</h2>
+    <p>Fill in the form above and tap Send. I will set up your free trial lesson. If you want to continue after that, I will send my Wise or GoTyme payment details.</p>
+  </section>
+</main>
+
+<script>
+(function () {
+  var ENDPOINT = 'https://formsubmit.co/ajax/annajencadayday@gmail.com';
+  var form = document.getElementById('needs-form');
+  var box = document.getElementById('result-box');
+  var out = document.getElementById('f-result');
+  var note = document.getElementById('copy-note');
+  var copyBtn = document.getElementById('copy-btn');
+  var sendBtn = document.getElementById('send-btn');
+  function v(id) { return document.getElementById(id).value.trim(); }
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var text = [
+      'Hi Aninaw! I would like a free trial lesson.',
+      'Name: ' + v('f-name'),
+      'Language: ' + v('f-lang'),
+      'Why I want to learn: ' + v('f-why'),
+      'My level: ' + v('f-level'),
+      'What I want to say or understand: ' + v('f-say'),
+      'App I am comfortable with: ' + v('f-app'),
+      'Lesson length: ' + v('f-len'),
+      'Time zone and best times: ' + v('f-time'),
+      'How to reach me: ' + v('f-contact')
+    ].join('\n');
+    out.value = text;
+    box.hidden = false;
+    note.textContent = 'Sending your answers...';
+    sendBtn.disabled = true;
+    fetch(ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        _subject: 'New lesson request from ' + v('f-name'),
+        _template: 'table',
+        _captcha: 'false',
+        _honey: '',
+        Name: v('f-name'),
+        Language: v('f-lang'),
+        Why: v('f-why'),
+        Level: v('f-level'),
+        'What they want to say': v('f-say'),
+        App: v('f-app'),
+        'Lesson length': v('f-len'),
+        'Time zone and best times': v('f-time'),
+        'How to reach them': v('f-contact')
+      })
+    }).then(function (res) {
+      return res.json().then(function (data) { return { ok: res.ok, data: data }; });
+    }).then(function (r) {
+      if (r.ok && String(r.data.success) === 'true') {
+        note.textContent = 'Sent. Thank you! I will reply to you soon. Your answers are below if you want to keep a copy.';
+      } else {
+        throw new Error('not sent');
+      }
+    }).catch(function () {
+      note.textContent = 'Your answers could not be sent. Please copy them and paste them into our chat.';
+    }).then(function () {
+      sendBtn.disabled = false;
+    });
+  });
+  copyBtn.addEventListener('click', function () {
+    function fallback() {
+      out.focus();
+      out.select();
+      note.textContent = 'Your answers are selected. Copy them, then paste them into our chat.';
+    }
+    try {
+      navigator.clipboard.writeText(out.value).then(function () {
+        note.textContent = 'Copied. You can paste it into our chat.';
+      }, fallback);
+    } catch (err) { fallback(); }
+  });
+})();
+</script>
+</body>
+</html>
